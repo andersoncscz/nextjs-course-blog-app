@@ -1,9 +1,15 @@
 import React from 'react'
+import ContactForm from '../../components/Contact/ContactForm'
+import Head from 'next/head'
 
 export default function ContactPage() {
     return (
-        <div>
-            
-        </div>
+        <>
+            <Head>
+                <title>Contact Me</title>
+                <meta name="description" content="Send me your messages" />
+            </Head>
+            <ContactForm />
+        </>
     )
 }
