@@ -3,8 +3,13 @@ import PostHeader from './PostHeader'
 import classes from './PostContent.module.css'
 import ReactMarkdown from 'react-markdown'
 import Image from 'next/image'
-import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
-import {materialDark} from 'react-syntax-highlighter/dist/cjs/styles/prism'
+import {PrismLight as SyntaxHighlighter} from 'react-syntax-highlighter'
+import materialDark from 'react-syntax-highlighter/dist/cjs/styles/prism/material-dark'
+import javascript from 'react-syntax-highlighter/dist/cjs/languages/prism/javascript'
+import css from 'react-syntax-highlighter/dist/cjs/languages/prism/css'
+
+SyntaxHighlighter.registerLanguage('js', javascript)
+SyntaxHighlighter.registerLanguage('css', css)
 
 export default function PostContent({ post }) {
     const {title, slug, image, content} = post
@@ -38,6 +43,7 @@ export default function PostContent({ post }) {
                     style={materialDark}
                     language={match[1]}
                     PreTag="div"
+                    // eslint-disable-next-line react/no-children-prop
                     children={String(children).replace(/\n$/, "")}
                     {...props} />
             ) : (

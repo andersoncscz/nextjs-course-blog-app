@@ -8,7 +8,7 @@ export default function HomePage({ featuredPosts }) {
     return (
         <>
             <Head>
-                <title>Anderson's Blog</title>
+                <title>Anderson Blog</title>
                 <meta description="I post about programming and fullstack development with Javascript" />
             </Head>
             <Hero />
