@@ -2,7 +2,15 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First, install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -11,4 +19,5 @@ yarn dev
 ```
 
 Open [https://nextjs-course-blog-app.vercel.app/](https://nextjs-course-blog-app.vercel.app/) with your browser to see the result.
+
 NextJS Course [https://www.udemy.com/course/nextjs-react-the-complete-guide](https://www.udemy.com/course/nextjs-react-the-complete-guide)
